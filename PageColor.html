@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html ng-app="pinkApp">
+    <head>
+        <title>my Angular</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+ </head>
+    <body ng-controller="pinkCtrl" style="alignment-adjust: auto; background-color:{{pinksColor}}" >
+       <p ng-init="pinksColor ='pink'">
+    
+       <p style="color:blue"> <b> Type your color here: <input ng-model="pinksColor" value="{{pinksColor}}" > </b> </p>
+       <p style="color:blue"> <b> Name: <input type="text" ng-model="name"> </b> </p>     
+       
+       
+       <div style="color:blue"> <b> My name is {{name}} {{content}}  </b> </div>
+        <script> 
+        var appvar = angular.module('pinkApp',[]);
+        appvar.controller('pinkCtrl', function($scope) {
+            $scope.content="and I can control my Shopping.";
+            });
+        
+        </script>
+     
+    </body>
+</html>
